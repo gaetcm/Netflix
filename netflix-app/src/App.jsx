@@ -18,8 +18,10 @@ function App() {
             return (
               <div>
                 {elem.category}
-                {elem.images((props) => {
-                  return <img src={props.images} />;
+
+                {data.map((elem) => {
+                  console.log(elem.images);
+                  return <img src={elem.images} />;
                 })}
               </div>
             );
