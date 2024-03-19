@@ -7,23 +7,23 @@ import data from "./assets/data.json";
 function App() {
   return (
     <>
-      <div className="container">
+      <div className="container kanit-semibold">
         <div className="logo">
           <Logo src={LogoPic} />
         </div>
 
         <div className="contenu">
           {data.map((elem) => {
-            console.log(elem);
             return (
-              <div>
-                {elem.category}
+              <>
+                <div className="titre">{elem.category}</div>
 
-                {data.map((elem) => {
-                  console.log(elem.images);
-                  return <img src={elem.images} />;
-                })}
-              </div>
+                <div className="show">
+                  {elem.images.map((pic) => {
+                    return <img src={pic} />;
+                  })}
+                </div>
+              </>
             );
           })}
         </div>
