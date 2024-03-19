@@ -14,7 +14,15 @@ function App() {
 
         <div className="contenu">
           {data.map((elem) => {
-            return <h1>{elem.category}</h1>;
+            console.log(elem);
+            return (
+              <div>
+                {elem.category}
+                {elem.images((props) => {
+                  return <img src={props.images} />;
+                })}
+              </div>
+            );
           })}
         </div>
       </div>

@@ -10,7 +10,7 @@
   width: 130px;
 }
 
-h1 {
+ {
   font-size: 40px;
   color: white;
 }
@@ -21,4 +21,5 @@ h1 {
 
 .contenu {
   margin-left: 30px;
+  color: white;
 }
